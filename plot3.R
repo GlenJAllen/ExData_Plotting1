@@ -12,6 +12,6 @@ lines(Date,
 lines(Date,
       Sub_metering_3,
       col = "blue")
-legend("topright", legend = ls(pos = 2) %>% .[grep("Sub", .)],
+legend("topright", legend = ls(pos = which(search() == "hpc")[1]) %>% .[grep("Sub", .)],
        col = c("black", "red", "blue"), lty = 1, cex = 0.8)
 dev.off()
