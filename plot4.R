@@ -1,4 +1,5 @@
 source("pull_clean_data.R")
+library(purrr)
 
 plot_w <- partial(plot, x = Date, type = "l")
 plot_w_dt <- partial(plot_w, xlab = "datetime")
