@@ -1,5 +1,6 @@
 source("pull_clean_data.R")
 
+png("plot3.png")
 plot(Date,
      Sub_metering_1,
      xlab = "",
@@ -13,4 +14,4 @@ lines(Date,
       col = "blue")
 legend("topright", legend = names(household.power.consumption) %>% .[grep("Sub", .)],
        col = c("black", "red", "blue"), lty = 1, cex = 0.8)
-ggsave("plot3.png")
+dev.off()
