@@ -1,8 +1,5 @@
 library(data.table)
-library(tidyverse)
-library(magrittr)
-
-setwd("C:/Users/u55a20/Downloads/jhu_eda")
+library(dplyr)
 
 suppressMessages(fread("household_power_consumption.txt", na.strings = "?") %>%
                    mutate(Date = as.Date(Date, "%d/%m/%Y")) %>%
