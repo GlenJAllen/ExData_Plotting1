@@ -12,7 +12,7 @@ plot_w_dt(Voltage)
 plot_w_n(Sub_metering_1, ylab = "Energy sub metering")
 lines(Date, Sub_metering_2, col = "red")
 lines(Date, Sub_metering_3, col = "blue")
-legend("topright", legend = ls(pos = which(search() == "hpc")[1]) %>% .[grep("Sub", .)],
+legend("topright", legend = paste0("Sub_metering_", 1:3),
        col = c("black", "red", "blue"), lty = 1, cex = 0.8, bty = "n")
 plot_w_dt(Global_reactive_power)
 dev.off()
